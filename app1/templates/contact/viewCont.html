@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title%}
+View Contact
+{% endblock %}
+{% block content %}
+<div class="alert alert-dark text-center m-5" role="alert">
+    <h1 class="text-center"><u>Contact Information</u></h1>
+ <img src="{{cot.pic.url}}" width="300px" class="m-3">
+<h4><b>Name:</b> {{cot.name}}</h4>
+<h4><b>Joining Date:</b> {{cot.datetime}}</h4>
+<h4><b>Email:</b> {{cot.email}}</h4>
+<h4><b>Mobile:</b> {{cot.mobile}}</h4>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title%}
+Delete Contact
+{% endblock %}
+{% block content %}
+<div class="w50 bg-dark text-white text-center p-4 m-5">
+    <h2>Delete ? {{cont.name}}</h2>
+    <form method="post" >
+        {% csrf_token %}
+        <div class="alert alert-danger">
+            <strong>Warning !</strong> {{cont.name}} will be deleted. Are you sure?
+        </div>
+        <button type="submit" class="btn btn-success">Delete</button>
+    </form>
+</div>
+{% endblock %}

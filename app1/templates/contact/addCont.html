@@ -1,0 +1,15 @@
+
+{% extends 'base.html' %}
+{% block title%}
+Add Contact
+{% endblock %}
+{% block content %}
+<div class="w50 bg-dark p-4 m-5"  >
+        <h2 class="text-center bg-dark text-white " style="text-align: center;">Add Contact</h2>
+    <form method="post" class="text-white" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-light" style="margin-left: 42%;" >Add Contact</button>
+    </form>
+</div>
+{% endblock %}
